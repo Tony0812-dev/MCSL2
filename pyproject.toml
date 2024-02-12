@@ -85,8 +85,8 @@ msvc = "latest"
 standalone = true
 lto = "yes"
 disable-console = false
-show-memory = false
-show-progress = false
+show-memory = true
+show-progress = true
 
 # 版本号 构建时通过 Tools/lndl-config.py 自动填充
 product-version = false
