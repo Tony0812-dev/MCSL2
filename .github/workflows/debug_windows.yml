@@ -42,7 +42,7 @@ jobs:
 
       - name: Build
         run: |
-          python -m lndl_nuitka . -y -- --disable-console
+          python -m lndl_nuitka . -y
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
