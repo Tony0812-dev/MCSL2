@@ -18,24 +18,13 @@ from hashlib import md5
 
 
 def getAnnouncement():
-    return (
-        MCSLNetworkSession()
-        .get("https://api.mcsl.com.cn/getAnnouncement", headers=__AuthorizationHeaders)
-        .text
-    )
-
+    pass
 
 def checkUpdate():
-    return (
-        MCSLNetworkSession()
-        .get("https://api.mcsl.com.cn/checkUpdate", headers=__AuthorizationHeaders)
-        .json()
-    )
-
+    pass
 
 def countUserAPI():
     pass
-
 
 def generateUniqueCode():
     return "-".join([
@@ -44,10 +33,3 @@ def generateUniqueCode():
         .upper()
         for i in range(0, 16, 4)
     ])
-
-
-__AuthorizationHeaders = {
-    "x-mcsl2-client-private-header": next(
-        (arg.split("=")[1] for arg in sys.argv[1:] if arg.startswith("--verified-header")), None
-    )
-}
