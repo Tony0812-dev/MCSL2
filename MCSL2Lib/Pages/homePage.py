@@ -212,7 +212,7 @@ class GetNoticeThread(QThread):
 
     def run(self):
         try:
-            notice = self.tr("公告: ") + getAnnouncement()
+            notice = self.tr("Self-Built Version")
             self.notice.emit(notice)
         except Exception:
             self.notice.emit(self.tr("网络连接失败，无法获取公告。"))
